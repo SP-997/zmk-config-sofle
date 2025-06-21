@@ -54,7 +54,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
@@ -82,7 +82,7 @@
                                             &trans    &trans      &trans    &trans     &trans           &trans  &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         raise_layer {
@@ -90,7 +90,7 @@
 // RAISE
  //,----------------------------------------.                    ,-----------------------------------------.
  // |      |      |      |      |      |      |                    |      |      |      |      |      |      |
- // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ // |------+------+------+------+------+------|                    |------+------+------+------+------+------|d
  // |      |      |      |      |      |      |                    | pg up| home |  Up  |  end |      | Bspc |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  // |      |      |      |      |      | Caps |-------.    ,-------| pg dw| Left | Down | Rigth|  Del | Bspc |
@@ -109,7 +109,7 @@
                 &trans       &trans       &trans        &trans      &trans      &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         adjust_layer {
@@ -136,7 +136,7 @@
                         &none   &none       &none   &none  &none                &none  &none &none &none &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
     };
