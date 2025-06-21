@@ -1,53 +1,9 @@
 name: Build ZMK firmware
-
-# Run on every push, on pull-requests, and when you click “Run workflow”
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    # Build the two halves in parallel
-    strategy:
-      matrix:
-        side: [left, right]
-
-    steps:
-      # ────────────────────────────────────────────────────────────────
-      # 1. Check out your zmk-config repository
-      - name: Checkout config
-        uses: actions/checkout@v4
-        with:
-          submodules: "recursive"
-
-      # ────────────────────────────────────────────────────────────────
-      # 2. Fetch the upstream ZMK repo + toolchain
-      - name: Set up ZMK build environment
-        uses: zmkfirmware/zmk/actions/setup@main
-
-      # ────────────────────────────────────────────────────────────────
-      # 3. Build the firmware for the current half
-      - name: Build ${{ matrix.side }} half
-        run: |
-          # Choose the correct shield list for this matrix entry
-          if [ "${{ matrix.side }}" = "left" ]; then
-            SHIELD="sofle_left nice_view_adapter nice_view"
-          else
-            SHIELD="sofle_right nice_view_adapter nice_view"
-          fi
-
-          # Do a *pristine* build in its own directory
-          west build -p always -d build/${{ matrix.side }} \
-            -b nice_nano_v2 -- -DSHIELD="$SHIELD"
-
-          # Copy the UF2 to a predictable name in the workspace root
-          cp build/${{ matrix.side }}/zephyr/zmk.uf2 \
-             firmware_${{ matrix.side }}.uf2
-
-      # ────────────────────────────────────────────────────────────────
-      # 4. Upload the artefact so you can download it from GitHub
-      - name: Upload ${{ matrix.side }} firmware
-        uses: actions/upload-artifact@v4
-        with:
-          name: zmk-${{ matrix.side }}
-          path: firmware_${{ matrix.side }}.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      # Force a pristine build directory for every target
+      west-build-args: "-p always"
