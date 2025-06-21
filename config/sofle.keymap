@@ -104,7 +104,7 @@
             bindings = <
 &trans     &trans      &trans    &trans     &trans      &trans                          &trans    &trans      &trans   &trans       &trans      &trans
 &trans     &trans      &trans    &trans     &trans      &trans                          &kp PG_UP &kp HOME    &kp UP   &kp END      &kp trans   &kp BSPC
-&trans     &trans      &trans    &trans     &trans      &kp CLCK                        &kp PG_DN &kp LEFT    &kp DOWN &kp RIGHT    &kp DEL     &kp BSPC
+&trans     &trans      &trans    &trans     &trans      &kp CLCK                        &kp PG_DN &kp LEFT    &kp DOWN &kp RIGHT    &kp DEL     &trans
 &trans     &trans      &trans    &trans     &trans      &trans      &trans      &trans  &trans    &trans      &trans   &trans       &trans      &trans
                             &trans       &trans       &trans        &trans      &trans  &trans  &trans    &trans    &trans   &trans
             >;
