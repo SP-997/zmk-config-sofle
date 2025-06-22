@@ -91,11 +91,11 @@
  //,----------------------------------------.                    ,-----------------------------------------.
  // |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- // |      |      |      |      |      |      |                    | pg up| home |  Up  |  end |      | Bspc |
+ // |      |      |      |      |      |K_APP|                    | pg up| home |  Up  |  end |      | Bspc |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  // |      |      |      |      |      | Caps |-------.    ,-------| pg dw| Left | Down | Rigth|  Del | Bspc |
  // |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
- // |      |      |      |      |      |      |-------|    |-------|      |      |      |      |      |      |
+ // |      |      |      |      |      |C_AC_SEARCH|-------|    |-------|      |      |      |      |      |      |
  // `-----------------------------------------/       /     \      \-----------------------------------------'
  //            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
  //            |      |      |      |      |/       /         \      \ |      |      |      |      |
@@ -103,9 +103,9 @@
  // 
             bindings = <
 &trans     &trans      &trans    &trans     &trans      &trans                          &trans    &trans      &trans   &trans       &trans      &trans
-&trans     &trans      &trans    &trans     &trans      &trans                          &kp PG_UP &kp HOME    &kp UP   &kp END      &trans   &kp BSPC
+&trans     &trans      &trans    &trans     &trans      &kp K_APP                          &kp PG_UP &kp HOME    &kp UP   &kp END      &trans   &kp BSPC
 &trans     &trans      &trans    &trans     &trans      &kp CAPS                        &kp PG_DN &kp LEFT    &kp DOWN &kp RIGHT    &kp DEL     &trans
-&trans     &trans      &trans    &trans     &trans      &trans      &trans      &trans  &trans    &trans      &trans   &trans       &trans      &trans
+&trans     &trans      &trans    &trans     &trans      &kp C_AC_SEARCH      &trans      &trans  &trans    &trans      &trans   &trans       &trans      &trans
                 &trans       &trans       &trans        &trans      &trans      &trans  &trans    &trans    &trans   &trans
             >;
 
