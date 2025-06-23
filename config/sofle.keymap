@@ -91,11 +91,11 @@
  //,----------------------------------------.                    ,-----------------------------------------.
  // |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- // |      |      |      |      |      |K_APP|                    | pg up| home |  Up  |  end |      | Bspc |
+ // |      |      |      |C_AC_SEARCH|K_APP|  |                    | pg up| home |  Up  |  end |      | Bspc |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- // |      |      |      |      |      | Caps |-------.    ,-------| pg dw| Left | Down | Rigth|  Del | Bspc |
+ // |      |      |      |      |      | Caps |-------.    ,-------| pg dw| Left | Down | Rigth|  Del |      |
  // |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
- // |      |      |      |      |      |C_AC_SEARCH|-------|    |-------|      |      |      |      |      |      |
+ // |      |      |      |      |      |      |-------|    |-------|      |      |      |      |      |      |
  // `-----------------------------------------/       /     \      \-----------------------------------------'
  //            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
  //            |      |      |      |      |/       /         \      \ |      |      |      |      |
@@ -103,9 +103,9 @@
  // 
             bindings = <
 &trans     &trans      &trans    &trans     &trans      &trans                          &trans    &trans      &trans   &trans       &trans      &trans
-&trans     &trans      &trans    &trans     &trans      &kp K_APP                          &kp PG_UP &kp HOME    &kp UP   &kp END      &trans   &kp BSPC
+&trans     &trans      &trans    &kp C_AC_SEARCH     &kp K_APP      &trans                          &kp PG_UP &kp HOME    &kp UP   &kp END      &trans   &kp BSPC
 &trans     &trans      &trans    &trans     &trans      &kp CAPS                        &kp PG_DN &kp LEFT    &kp DOWN &kp RIGHT    &kp DEL     &trans
-&trans     &trans      &trans    &trans     &trans      &kp C_AC_SEARCH      &trans      &trans  &trans    &trans      &trans   &trans       &trans      &trans
+&trans     &trans      &trans    &trans     &trans      &trans      &trans      &trans  &trans    &trans      &trans   &trans       &trans      &trans
                 &trans       &trans       &trans        &trans      &trans      &trans  &trans    &trans    &trans   &trans
             >;
 
@@ -114,8 +114,8 @@
 
         adjust_layer {
 // MO3
- // ,----------------------------------------.                    ,-----------------------------------------.
- // |  F1  |  F2  |  F3  |  F45  |  F5  |  F6  |                    |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  |
+ // ,----------------------------------------.                     ,-----------------------------------------.
+ // |  F1  |  F2  |  F3  |  F45 |  F5  |  F6  |                    |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  // |BTCLR |BT1   |BT2   |BT3   |BT4   |BT5   |                    |      |  <<  |  >   |   >> |      |      |
  // |------+------+------+------+------+------|                    |------+------+------+------+------+------|
